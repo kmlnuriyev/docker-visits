@@ -1,8 +1,9 @@
-version: "3.9"
+version: '3.9'
 services:
   redis-server:
-    image: "redis"
+    image: 'redis'
   node-app:
+    restart: always
     build: .  # Look into current directory for a 'Dockerfile' and build that image
     ports:
       - "4001:8081" # First number is port number on your machine, and the second is the port inside the container
